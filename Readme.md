@@ -1,5 +1,7 @@
 # RyzenMasterBindings
 
+Download from [nuget](https://www.nuget.org/packages/RyzenMasterBindings/)
+
 ### Important Notice
 
 This software uses headers and libs distributed as part of the Ryzen Master SDK. The license agreement can be seen [
