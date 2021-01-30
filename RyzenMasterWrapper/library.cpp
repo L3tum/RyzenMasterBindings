@@ -152,7 +152,7 @@ void Cpu_GetPackage(ICPUEx *cpu, char *str, int capacity) {
 }
 
 bool Cpu_GetChipsetName(ICPUEx *cpu, char *str, int capacity) {
-    auto name = new wchar_t[capacity];
+    wchar_t name[20] = L"\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
     auto success = cpu->GetChipsetName(name);
 
     if (success == 0) {
