@@ -11,12 +11,12 @@ namespace RyzenMasterBindingsTester
             Console.WriteLine(RyzenMasterLibrary.Init(NullLogger.Instance));
             using var platform = Platform.GetPlatform();
             Console.WriteLine(platform.Init());
-            var deviceManager = platform.GetDeviceManager();
+            using var deviceManager = platform.GetDeviceManager();
             Console.WriteLine(deviceManager.GetTotalDeviceCount());
 
             for (var i = 0u; i < deviceManager.GetTotalDeviceCount(); i++)
             {
-                var device = deviceManager.GetDevice(i);
+                using var device = deviceManager.GetDevice(i);
                 Console.WriteLine("-----");
                 Console.WriteLine("Index: {0}", i);
                 Console.WriteLine("Name: {0}", device.GetName());
@@ -29,7 +29,7 @@ namespace RyzenMasterBindingsTester
 
                 if (device.GetDeviceType() == DeviceType.DT_BIOS)
                 {
-                    var bios = device.AsBios();
+                    using var bios = device.AsBios();
                     Console.WriteLine("Mem VDDIO: {0}", bios.GetMemVDDIO());
                     Console.WriteLine("Mem Clock: {0}", bios.GetCurrentMemClock());
                     Console.WriteLine("Mem CTRL TCL: {0}", bios.GetMemCtrlTcl());
@@ -42,7 +42,7 @@ namespace RyzenMasterBindingsTester
                 }
                 else if (device.GetDeviceType() == DeviceType.DT_CPU)
                 {
-                    var cpu = device.AsCpu();
+                    using var cpu = device.AsCpu();
                     Console.WriteLine("L1D: {0}", cpu.GetL1DataCacheInfo()?.ToString());
                     Console.WriteLine("L1I: {0}", cpu.GetL1InstructionCacheInfo()?.ToString());
                     Console.WriteLine("L2: {0}", cpu.GetL2CacheInfo()?.ToString());

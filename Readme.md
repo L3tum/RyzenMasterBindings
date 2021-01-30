@@ -45,6 +45,14 @@ Bios Device.AsBios()
 Cpu Device.AsCpu()
 ````
 
+Don't forget to free the loaded library after use with
+
+````c#
+RyzenMasterLibrary.UnInit()
+````
+
+though it would be cleaned up by the OS anyways. You only *have* to use this if you have a long-running application and don't want to keep the library around.
+
 ## License
 
 This software is distributed under the MIT License. Any external software used is distributed under its respective

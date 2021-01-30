@@ -4,13 +4,19 @@ using System.Text;
 
 namespace RyzenMasterBindings
 {
-    public class Device
+    public class Device : IDisposable
     {
-        protected readonly IntPtr Handle;
+        protected IntPtr Handle;
 
         internal Device(IntPtr native)
         {
             Handle = native;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -109,6 +115,15 @@ namespace RyzenMasterBindings
         public ulong GetIndex()
         {
             return NativeMethods.Device_GetIndex(Handle);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (Handle != IntPtr.Zero)
+            {
+                Marshal.FreeHGlobal(Handle);
+                Handle = IntPtr.Zero;
+            }
         }
 
         private static class NativeMethods

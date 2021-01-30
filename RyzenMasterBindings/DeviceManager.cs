@@ -3,13 +3,18 @@ using System.Runtime.InteropServices;
 
 namespace RyzenMasterBindings
 {
-    public class DeviceManager
+    public class DeviceManager : IDisposable
     {
         private readonly IntPtr handle;
 
         internal DeviceManager(IntPtr handle)
         {
             this.handle = handle;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
         }
 
         public ulong GetTotalDeviceCount()
@@ -21,6 +26,11 @@ namespace RyzenMasterBindings
         {
             var instance = NativeMethods.DeviceManager_GetDevice(handle, index);
             return new Device(instance);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            Marshal.FreeHGlobal(handle);
         }
 
         private static class NativeMethods
