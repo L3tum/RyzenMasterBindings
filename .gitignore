@@ -1,0 +1,7 @@
+.idea
+**/bin/**
+**/obj/**
+**/cmake-build-debug/**
+**/cmake-build-release/**
+RyzenMasterWrapper/external/ryzenmasterinclude/*.h
+RyzenMasterWrapper/external/ryzenmasterlibs/*.lib
