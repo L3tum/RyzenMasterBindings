@@ -27,5 +27,5 @@ jobs:
       id: publish_nuget
       uses: rohith/publish-nuget@v2
       with:
-        # Filepath of the project to be packaged, relative to root of repository
         PROJECT_FILE_PATH: RyzenMasterBindings/RyzenMasterBindings.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
