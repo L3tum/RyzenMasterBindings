@@ -2,14 +2,14 @@
 
 ### Important Notice
 
-This software uses headers and libs distributed as part of the Ryzen Master SDK. The license agreement can be seen (
-here)[RyzenMasterWrapper/external/ryzenmasterlibs/License.rtf].
+This software uses headers and libs distributed as part of the Ryzen Master SDK. The license agreement can be seen [
+here](RyzenMasterWrapper/external/ryzenmasterlibs/License.rtf).
 
 Unfortunately, due to the restrictiveness of the license (and my limited knowledge of copyright law), I am not able to
-redistribute the header files nor the object files required to build this project completely. However, you can go to (
-the download page)[https://developer.amd.com/amd-ryzentm-master-monitoring-sdk/] for the SDK and download it yourself.
-You'll then need to place the *.LIB and *.H files in its respective directories inside of (
-RyzenMasterWrapper)[RyzenMasterWrapper/external].
+redistribute the header files nor the object files required to build this project completely. However, you can go to [
+the download page](https://developer.amd.com/amd-ryzentm-master-monitoring-sdk/) for the SDK and download it yourself.
+You'll then need to place the *.LIB and *.H files in its respective directories inside of [
+RyzenMasterWrapper](RyzenMasterWrapper/external).
 
 ## Usage
 
