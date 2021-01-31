@@ -7,8 +7,8 @@
         <Configurations>Debug;Release</Configurations>
         <Platforms>AnyCPU;x64</Platforms>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<Version>1.0.1.0</Version>
-		<PackageVersion>1.0.1.0</PackageVersion>
+		<Version>1.0.2.0</Version>
+		<PackageVersion>1.0.2.0</PackageVersion>
 		<Title>RyzenMasterBindings</Title>
 		<Authors>L3tum</Authors>
 		<Description>C# Bindings for the Ryzen Master SDK</Description>
@@ -17,8 +17,8 @@
 		<PackageLicenseUrl>https://github.com/L3tum/RyzenMasterBindings/LICENSE</PackageLicenseUrl>
 		<RepositoryUrl>https://github.com/L3tum/RyzenMasterBindings</RepositoryUrl>
 		<RepositoryType>github</RepositoryType>
-		<AssemblyVersion>1.0.1</AssemblyVersion>
-		<FileVersion>1.0.1</FileVersion>
+		<AssemblyVersion>1.0.2</AssemblyVersion>
+		<FileVersion>1.0.2</FileVersion>
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>sgkey.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
